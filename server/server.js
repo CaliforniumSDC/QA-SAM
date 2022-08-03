@@ -26,10 +26,7 @@ app.get('/qa/questions', (req, res) => {
       results: results,
     }
     res.send(returnObj);
-  }).catch((err) => {
-    console.log(err);
-    res.sendStatus(500);
-  })
+  }).catch(() => res.sendStatus(500))
 });
 
 //Get list of all answers
@@ -46,10 +43,7 @@ app.get('/qa/questions/:question_id/answers', (req, res) => {
       results: results[0].answers,
     }
     res.send(returnObj);
-  }).catch((err) => {
-    console.log(err);
-    res.sendStatus(500);
-  })
+  }).catch(() => res.sendStatus(500));
 });
 
 //Post a question
@@ -58,14 +52,8 @@ app.post('/qa/questions', (req, res) => {
     res.sendStatus(500);
   }
   postQuestion(req)
-  .then((result) => {
-    console.log(result);
-    res.sendStatus(201);
-  })
-  .catch((err) => {
-    console.log(err);
-    res.sendStatus(500);
-  })
+  .then(() => res.sendStatus(201))
+  .catch(() => res.sendStatus(500))
 });
 
 //Post an answer
@@ -73,16 +61,9 @@ app.post('/qa/questions/:question_id/answers', (req, res) => {
   if (!req.params.question_id) {
     res.sendStatus(500);
   }
-  console.log('answrr Post request: ', req.query)
   postAnswer(req)
-  .then((result) => {
-    console.log(result);
-    res.sendStatus(201);
-  })
-  .catch((err) => {
-    console.log(err);
-    res.sendStatus(500);
-  })
+  .then(() => res.sendStatus(201))
+  .catch(() => res.sendStatus(500))
 });
 
 //Mark question as helpful

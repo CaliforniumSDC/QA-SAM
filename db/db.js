@@ -145,12 +145,12 @@ async function reportAnswer(request) {
 }
 
 module.exports = {
-getQuestions: getQuestions,
-getAnswers: getAnswers,
-markQAsHelpful: markQAsHelpful,
-postQuestion: postQuestion,
-postAnswer: postAnswer,
-reportQuestion: reportQuestion,
-markAnsAsHelpful: markAnsAsHelpful,
-reportAnswer: reportAnswer
+  getQuestions: getQuestions,
+  getAnswers: getAnswers,
+  markQAsHelpful: markQAsHelpful,
+  postQuestion: postQuestion,
+  postAnswer: postAnswer,
+  reportQuestion: reportQuestion,
+  markAnsAsHelpful: markAnsAsHelpful,
+  reportAnswer: reportAnswer
 };

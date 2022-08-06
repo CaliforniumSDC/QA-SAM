@@ -53,10 +53,11 @@ app.get('/qa/questions/:question_id/answers', (req, res) => {
 app.post('/qa/questions', (req, res) => {
   if (!req.query.product_id) {
     res.sendStatus(500);
-  }
+  } else {
   postQuestion(req)
   .then(() => res.sendStatus(201))
   .catch(() => res.sendStatus(500))
+  }
 });
 
 //Post an answer

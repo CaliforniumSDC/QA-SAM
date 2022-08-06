@@ -1,10 +1,13 @@
 const express = require('express');
-// const { MongoClient } = require("mongodb");
+const path = require('path');
 const { getQuestions, getAnswers, postQuestion, postAnswer, reportAnswer, markAnsAsHelpful, reportQuestion, markQAsHelpful } = require('../db/db.js');
 
 //Express variables
 const app = express();
 const port = 3000;
+
+
+// app.use(express.static(path.join(__dirname, '')));
 
 //Express connection
 app.listen(port, () => {

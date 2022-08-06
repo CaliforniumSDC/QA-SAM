@@ -1,4 +1,5 @@
 const { MongoClient, ObjectID } = require("mongodb");
+require('dotenv').config();
 
 //Mongo Variables
 const uri = "mongodb://localhost:27017/";
@@ -96,12 +97,17 @@ async function postQuestion(request) {
 
 async function postAnswer(request) {
   const filter = { _id: ObjectID(request.params.question_id) };
-  let photosArr = request.query.photos.map((item) => {
-    return {
-      _id: new ObjectID(),
-      url: item
-    };
-  })
+  let photosArr;
+  if (request.query.photos) {
+    photosArr = request.query.photos.map((item) => {
+      return {
+        _id: new ObjectID(),
+        url: item
+      };
+    })
+  } else {
+    photosArr = [];
+  }
   const updatedoc = {
     $push: {
       answers : {

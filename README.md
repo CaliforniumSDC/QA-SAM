@@ -33,4 +33,4 @@ npm install
 npm run dev-server
 ```
 
-4. Server will now be live at localhost:3000 and you can send requests to it. For example a GET reuqest to localhost:3000/qa/questions will return a list of questions (default 5).
+4. Server will now be live at localhost:3000 and you can send requests to it. For example a GET request to localhost:3000/qa/questions will return a list of questions (default 5).

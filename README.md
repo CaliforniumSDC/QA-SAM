@@ -8,7 +8,7 @@ This project's objective was to refactor an existing e-commerce website's backen
 #### Performance:
 These are loader.io results from this DB and server configured on AWS with an NGINX load balancer over 4 EC2 instances.
 * GET Questions (/qa/questions)
-![getquestions](https://user-images.githubusercontent.com/96403295/188888646-122c8bb6-06ff-4285-9af7-bb1589b24f09.png)
+<img width="300" alt="Screen Shot 2022-09-07 at 9 18 58 AM" src="https://user-images.githubusercontent.com/96403295/188889027-a4025062-68c6-4f65-8766-ed044348dc49.png">
 * GET Answers (/qa/questions/:question_id/answers)
 ![getanswers](https://i.gyazo.com/2cf74f19df9cbd0546647229c0ad4d27.gif)
 * POST Questions (/qa/questions)
